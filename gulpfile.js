@@ -2,8 +2,8 @@ const gulp = require('gulp');
 const htmlMinify = require("gulp-htmlmin");
 const babel = require("gulp-babel");
 const sass = require('gulp-sass');
-// const postcss = require("gulp-postcss");
-// const autoPrefixer = require("autoprefixer");
+const postcss = require("gulp-postcss");
+const autoPrefixer = require("autoprefixer");
 const rename = require("gulp-rename");
 const del = require("del");
 const plumber = require("gulp-plumber");
@@ -29,9 +29,9 @@ function styleTask() {
     return gulp.src('src/styles/style.scss')
         .pipe(plumber())
         .pipe(sass().on('error', sass.logError))
-        // .pipe(postcss([
-        //     autoPrefixer({overrideBrowserslist: ["last 2 versions"]})
-        // ]))
+        .pipe(postcss([
+            autoPrefixer({overrideBrowserslist: ["last 2 versions"]})
+        ]))
         .pipe(gulp.dest('build/css'))
         .pipe(cssMinify())
         .pipe(rename({ extname: '.min.css' }))
