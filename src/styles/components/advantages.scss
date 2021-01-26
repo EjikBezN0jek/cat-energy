@@ -1,0 +1,33 @@
+@import "../variables";
+@import "../mixins";
+
+
+
+.advantages {
+  padding-top: 32px;
+}
+.advantages__title {
+  @include oswald;
+  color: $title-color;
+  font-size: 36px;
+  padding-bottom: 35px;
+}
+
+.advantages__text {
+  margin-left: 20px;
+}
+
+.advantages__item {
+  @include flex-space;
+  &:not(:first-child){
+    padding-top: 20px;
+  }
+}
+
+.advantages__icon {
+  padding: 15px 17px;
+  background: $color-main;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}

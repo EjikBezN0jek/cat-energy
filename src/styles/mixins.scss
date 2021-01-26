@@ -1,0 +1,13 @@
+@import "./variables";
+
+@mixin flex-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+@mixin oswald {
+  font-family: 'Oswald',sans-serif;
+}
+

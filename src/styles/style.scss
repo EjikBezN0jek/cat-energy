@@ -1,9 +1,52 @@
 @import "fonts";
 @import "normalize";
+@import "variables";
+@import "mixins";
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
 
 body {
-  background: navajowhite;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  color: $font-color;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
 }
+
+main {
+  flex: 1 0 auto;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 0 20px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 
 .hidden {
   position: absolute;
@@ -18,3 +61,7 @@ body {
 }
 
 @import "components/button";
+@import "components/icon";
+@import "components/header";
+@import "components/banner";
+@import "components/advantages";

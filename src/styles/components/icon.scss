@@ -1,0 +1,57 @@
+@import "../variables";
+@import "../mixins";
+
+
+.icon__img {
+
+  &--helpful {
+    width: 26px;
+    height: 29px;
+  }
+
+  &--powder {
+    width: 29px;
+    height: 31px;
+  }
+
+  &--eating {
+    width: 23px;
+    height: 30px;
+  }
+
+  &--time {
+    width: 26px;
+    height: 31px;
+  }
+}
+
+.programs__icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  background-color: $color-main;
+  border-radius: 50%;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 35px;
+    height: 50px;
+    background: url("../icons/cat-icon.png") no-repeat;
+  }
+
+    &--panther {
+      margin: 0 8px;
+
+      &:after {
+        width: 67px;
+        height: 28px;
+        background: url("../icons/cat-2-icon.png") no-repeat;
+      }
+    }
+}
+

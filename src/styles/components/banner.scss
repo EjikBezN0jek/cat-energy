@@ -1,0 +1,23 @@
+@import "../variables";
+@import "../mixins";
+
+.banner {
+  background: url("../img/index-background-mobile.png")center top no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.banner__title {
+  @include oswald;
+  font-size: 36px;
+  padding-top: 29px;
+}
+
+.banner__subtitle {
+  @include oswald;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 19px 0 29px;
+}
+
+

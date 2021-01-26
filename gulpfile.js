@@ -14,8 +14,8 @@ const browserSync = require('browser-sync').create();
 
 function copyTask() {
     return gulp.src([
-        "src/fonts/**/*.{woff,woff2}"
-    ], {
+        "src/fonts/**/*.{woff,woff2}",
+        "src/icons/**/*.{svg,png}"], {
         base: "src"
     })
         .pipe(gulp.dest("build"))
@@ -63,6 +63,7 @@ function htmlTask() {
     return gulp.src("src/*.html")
         .pipe(htmlMinify({ collapseWhitespace: true }))
         .pipe(gulp.dest("build"))
+        .pipe(browserSync.stream());
 }
 
 function serveTask() {
