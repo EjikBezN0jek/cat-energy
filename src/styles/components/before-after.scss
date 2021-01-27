@@ -1,0 +1,42 @@
+@import "../variables";
+@import "../mixins";
+
+
+.switch {
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+}
+
+.before__title,
+.after__title {
+  @include oswald;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $title-color;
+}
+
+.before__title {
+  margin-right: 18px;
+}
+
+
+.after__title {
+  margin-left: 18px;
+}
+
+.switch__decor {
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+  width: 84px;
+  height: 14px;
+}
+
+.switch__decor--item {
+  background: $color-main;
+  border-radius: 3px;
+  width: 35px;
+  height: 6px;
+  margin: 3px 0 3px 6px;
+}

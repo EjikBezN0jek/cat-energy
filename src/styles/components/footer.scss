@@ -1,0 +1,42 @@
+@import "../variables";
+@import "../mixins";
+@import "decor-line";
+
+footer {
+  background: $color-back;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  padding: 39px 0 22px;
+}
+
+.footer__logo {
+  background: url("../img/footer-logo.png")no-repeat;
+  width: 128px;
+  height: 24px;
+}
+
+.logo-underline {
+  margin-top: 31px;
+}
+
+.socials-underline {
+  margin-top: 22px;
+}
+
+.footer__logo {
+  margin: 0 auto;
+}
+
+
+.socials {
+  padding-top: 24px;
+  margin: 0 auto;
+}
+
+.copyright {
+  padding-top: 22px;
+}

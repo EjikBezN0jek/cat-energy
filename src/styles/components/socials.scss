@@ -1,0 +1,29 @@
+@import "../variables";
+@import "../mixins";
+
+
+.socials {
+  @include flex-space;
+  width: 125px;
+}
+
+.socials__vk {
+  background: url("../icons/vk.png")no-repeat;
+  width: 22px;
+  height: 12px;
+}
+
+.socials__inst {
+   background: url("../icons/insta.png")no-repeat;
+   width: 16px;
+   height: 16px;
+ }
+
+.socials__fb {
+  background: url("../icons/fb.png")no-repeat;
+  width: 10px;
+  height: 19px;
+}
+
+
+

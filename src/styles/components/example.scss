@@ -1,0 +1,44 @@
+@import "../variables";
+@import "../mixins";
+
+.example {
+  background: $color-back;
+  margin-top: 42px;
+}
+
+.example__container {
+  padding-top: 33px;
+  padding-bottom: 39px;
+}
+
+.example__title {
+  @include oswald;
+  color: $title-color;
+  font-size: 36px;
+
+}
+.example__text {
+  line-height: 18px;
+  padding-top: 33px;
+}
+
+.example__total {
+  @include oswald;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $title-color;
+  padding-top: 25px;
+}
+
+.features {
+  @include flex-space;
+}
+
+.features__item {
+  margin-top: 27px;
+}
+
+.before-after {
+  padding-top: 44px;
+}

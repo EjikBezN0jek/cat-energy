@@ -1,0 +1,58 @@
+@import "../variables";
+@import "../mixins";
+@import "decor-line";
+
+.programs {
+  padding-top: 24px;
+}
+
+.programs__container {
+  background: $color-back;
+  padding-top: 22px;
+
+  &:not(:first-child){
+    margin-top: 20px;
+  }
+}
+
+
+.programs__header {
+  display: flex;
+  align-items: center;
+}
+
+.programs__title {
+  @include oswald;
+  color: $title-color;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-left: 20px;
+
+  &--special {
+    margin-left: 12px;
+  }
+}
+
+.programs__text {
+  padding-top: 24px;
+  line-height: 18px;
+  position: relative;
+}
+
+.decor-line {
+  margin-top: 23px;
+}
+
+.programs__link {
+  @include oswald;
+  text-transform: uppercase;
+  color: $title-color;
+  position: relative;
+  font-size: 16px;
+  display: inline-block;
+  margin: 20px 0 22px;
+}
+
+.link__img {
+  margin-left: 12px;
+}

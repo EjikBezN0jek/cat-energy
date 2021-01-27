@@ -1,0 +1,46 @@
+@import "../variables";
+@import "../mixins";
+
+
+
+
+.map__header {
+  @include flex-space;
+  padding-top: 31px;
+  padding-bottom: 26px;
+}
+
+.map__title {
+  @include oswald;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $title-color;
+  line-height: 20px;
+
+}
+
+.map__address {
+  line-height: 20px;
+}
+
+.map__image {
+  background: url("../img/map.png")no-repeat;
+  background-position-y: -30px;
+  height: 370px;
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 42%;
+    left: 44%;
+    transform: translate(-50% -50%);
+    background: url("../img/map-pin.png")no-repeat;
+    width: 55px;
+    height: 53px;
+  }
+
+}

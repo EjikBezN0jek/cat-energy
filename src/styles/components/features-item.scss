@@ -1,0 +1,24 @@
+@import "../variables";
+@import "../mixins";
+
+.features__item {
+  background: url("../img/weight-back.png")no-repeat;
+  width: 124px;
+}
+
+.features__value {
+  @include oswald;
+  font-size: 24px;
+  color: $title-color;
+  text-align: center;
+  padding: 13px 0 0;
+}
+
+.features__label {
+  text-align: center;
+  padding-top: 12px;
+  font-size: 12px;
+  width: 87px;
+  background: $color-back;
+  margin: 0 auto;
+}
