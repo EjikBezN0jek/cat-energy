@@ -39,13 +39,18 @@ p {
   margin: 0 auto;
   max-width: 320px;
   padding: 0 20px;
+
+  @include tablet {
+    max-width: 768px;
+    padding: 0 30px;
+  }
 }
 
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+//ul, ol {
+//  margin: 0;
+//  padding: 0;
+//  list-style: none;
+//}
 
 .link {
   text-decoration: none;
@@ -66,17 +71,12 @@ p {
   clip: rect(0 0 0 0);
 }
 
-.programs {
-  margin-top: 22px;
-}
-
 @import "components/button";
 @import "components/icon";
 @import "components/header";
 @import "components/banner";
 @import "components/advantages";
 @import "components/program-card";
-@import "components/decor-line";
 @import "components/example";
 @import "components/features-item";
 @import "components/before-after";

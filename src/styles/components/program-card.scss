@@ -1,17 +1,29 @@
 @import "../variables";
 @import "../mixins";
-@import "decor-line";
 
 .programs {
   padding-top: 24px;
+
+  @include tablet {
+    padding-top: 0;
+  }
 }
 
 .programs__container {
+  @include flex-space;
   background: $color-back;
-  padding-top: 22px;
+  padding: 22px 20px;
+
+  @include tablet {
+    padding: 81px 62px 62px 53px;
+  }
 
   &:not(:first-child){
     margin-top: 20px;
+
+    @include tablet {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -28,8 +40,17 @@
   font-size: 24px;
   margin-left: 20px;
 
+  @include tablet {
+    margin-left: 0;
+    font-size: 36px;
+  }
+
   &--special {
     margin-left: 12px;
+
+    @include tablet {
+      margin-left: 0;
+    }
   }
 }
 
@@ -37,10 +58,16 @@
   padding-top: 24px;
   line-height: 18px;
   position: relative;
-}
+  padding-bottom: 23px;
+  border-bottom: $decor-line;
 
-.decor-line {
-  margin-top: 23px;
+  @include tablet {
+    border-bottom: none;
+    padding-top: 26px;
+    font-size: 16px;
+    padding-bottom: 0;
+    line-height: 24px;
+  }
 }
 
 .programs__link {
@@ -50,9 +77,87 @@
   position: relative;
   font-size: 16px;
   display: inline-block;
-  margin: 20px 0 22px;
+  margin-top: 20px;
+  padding-right: 36px;
+
+  @include tablet {
+    font-size: 20px;
+    margin-top: 61px;
+    padding-right: 50px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+    display: block;
+    background: url("../icons/right-arrow.png")no-repeat;
+    width: 24px;
+    height: 11px;
+  }
 }
 
-.link__img {
-  margin-left: 12px;
+.programs__icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  background-color: $color-main;
+  border-radius: 50%;
+
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 35px;
+    height: 50px;
+    background: url("../icons/cat-slim-tablet.png") no-repeat;
+    background-size: cover;
+  }
+
+  @include tablet {
+    display: none;
+    margin-left: 21px;
+  }
+}
+
+.programs__icon--big {
+  display: none;
+  height: 200px;
+  width: 200px;
+  flex-shrink: 0;
+
+  &:after {
+    width: 140px;
+    height: 194px;
+  }
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.programs__icon--panther {
+  margin: 0 8px;
+
+  &:after {
+    top: 50%;
+    width: 67px;
+    height: 28px;
+    background: url("../icons/cat-pro-tablet.png") no-repeat;
+    background-size: cover;
+  }
+
+  @include tablet {
+    margin: 0 0 0 50px;
+    &:after {
+      width: 268px;
+      height: 112px;
+    }
+  }
 }

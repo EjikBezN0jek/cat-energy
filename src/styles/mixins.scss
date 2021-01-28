@@ -11,3 +11,8 @@
   font-family: 'Oswald',sans-serif;
 }
 
+@mixin tablet {
+  @media screen and (min-width: $tablet-width){
+    @content;
+  }
+}

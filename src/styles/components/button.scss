@@ -3,10 +3,11 @@
 
 .button {
   border: none;
-      &:active,
-      &:focus {
-        outline: none;
-      }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
 
   &--basic {
     @include oswald;
@@ -14,16 +15,22 @@
     color: white;
     padding: 14px;
     text-transform: uppercase;
-  }
 
-  &--wide {
-    width: 100%;
+    @include tablet {
+      width: 245px;
+      padding: 16px 27px;
+      font-size: 20px;
+    }
   }
 
   &--burger {
     background: url("../icons/mobile-menu.png") no-repeat;
     width: 24px;
     height: 18px;
+
+    @include tablet{
+      display: none;
+    }
   }
 
 }

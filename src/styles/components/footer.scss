@@ -1,6 +1,5 @@
 @import "../variables";
 @import "../mixins";
-@import "decor-line";
 
 footer {
   background: $color-back;
@@ -16,15 +15,10 @@ footer {
   background: url("../img/footer-logo.png")no-repeat;
   width: 128px;
   height: 24px;
+  padding-bottom: 31px;
+  border-bottom: $decor-line;
 }
 
-.logo-underline {
-  margin-top: 31px;
-}
-
-.socials-underline {
-  margin-top: 22px;
-}
 
 .footer__logo {
   margin: 0 auto;
@@ -34,6 +28,8 @@ footer {
 .socials {
   padding-top: 24px;
   margin: 0 auto;
+  padding-bottom: 22px;
+  border-bottom: $decor-line;
 }
 
 .copyright {
