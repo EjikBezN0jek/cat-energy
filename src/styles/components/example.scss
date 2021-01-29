@@ -4,11 +4,21 @@
 .example {
   background: $color-back;
   margin-top: 42px;
+
+  @include tablet {
+    border-top: $decor-line;
+    background: linear-gradient(transparent 57%, $color-back-tablet 57%);
+  }
 }
 
 .example__container {
   padding-top: 33px;
   padding-bottom: 39px;
+
+  @include tablet {
+    padding-top: 51px;
+    padding-bottom: 68px;
+  }
 }
 
 .example__title {
@@ -16,10 +26,26 @@
   color: $title-color;
   font-size: 36px;
 
+  @include tablet {
+    font-size: 60px;
+  }
+
 }
 .example__text {
   line-height: 18px;
   padding-top: 33px;
+
+  @include tablet{
+    padding-top: 60px;
+    line-height: 24px;
+  }
+}
+
+
+.example__stats {
+  @include tablet {
+    @include flex-space;
+  }
 }
 
 .example__total {
@@ -28,7 +54,14 @@
   text-align: center;
   text-transform: uppercase;
   color: $title-color;
-  padding-top: 25px;
+  padding-top: 38px;
+
+  @include tablet{
+    text-align: right;
+    font-size: 20px;
+    width: 174px;
+    line-height: 25px;
+  }
 }
 
 .features {
@@ -36,9 +69,19 @@
 }
 
 .features__item {
-  margin-top: 27px;
+  margin: 27px 0 0;
+}
+
+
+.before-picture {
+  display: block;
+  margin: 0 auto;
 }
 
 .before-after {
   padding-top: 44px;
+
+  @include tablet {
+    padding-top: 86px;
+  }
 }

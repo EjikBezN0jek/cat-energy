@@ -8,6 +8,10 @@
 .copyright__text {
   font-size: 16px;
   color: $font-color;
+
+  @include tablet {
+    padding-right: 23px;
+  }
 }
 
 .copyright__logo {

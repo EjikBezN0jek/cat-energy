@@ -9,6 +9,11 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 39px 20px 22px;
+
+  @include tablet {
+    flex-direction: row;
+    padding: 64px 30px 62px;
+  }
 }
 
 .footer__logo {
@@ -17,11 +22,20 @@ footer {
   height: 24px;
   padding-bottom: 31px;
   border-bottom: $decor-line;
+
+  @include tablet {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 }
 
 
 .footer__logo {
   margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+  }
 }
 
 
@@ -30,8 +44,18 @@ footer {
   margin: 0 auto;
   padding-bottom: 22px;
   border-bottom: $decor-line;
+
+  @include tablet {
+    border-bottom: none;
+    padding: 0;
+  }
 }
 
 .copyright {
   padding-top: 22px;
+
+  @include tablet {
+    padding-top: 0;
+  }
 }
+

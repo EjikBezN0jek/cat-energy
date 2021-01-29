@@ -5,7 +5,12 @@
 .switch {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-top: 35px;
+
+  @include tablet {
+    padding-top: 21px;
+  }
 }
 
 .before__title,
@@ -14,6 +19,12 @@
   font-size: 16px;
   text-transform: uppercase;
   color: $title-color;
+
+  @include tablet {
+    font-size: 20px;
+    padding-bottom: 6px;
+    border-bottom: 1px dotted rgba(68, 68, 68, 0.23);
+  }
 }
 
 .before__title {
@@ -31,6 +42,15 @@
   border: 1px solid #cdcdcd;
   width: 84px;
   height: 14px;
+  position: relative;
+
+  @include tablet {
+    background: #dcdcdc;
+    border-radius: 2.5px;
+    width: 428px;
+    height: 6px;
+    border: none;
+  }
 }
 
 .switch__decor--item {
@@ -39,4 +59,32 @@
   width: 35px;
   height: 6px;
   margin: 3px 0 3px 6px;
+
+  @include tablet {
+    background: white;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.switch__decor--dot {
+  display: none;
+
+  @include tablet {
+    display: block;
+    background: $color-main;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

@@ -11,18 +11,36 @@
   background: url("../icons/vk.png")no-repeat;
   width: 22px;
   height: 12px;
+
+  @include tablet{
+    background: url("../icons/vk-tablet.png")no-repeat;
+    width: 30px;
+    height: 16px;
+  }
 }
 
 .socials__inst {
    background: url("../icons/insta.png")no-repeat;
    width: 16px;
    height: 16px;
+
+  @include tablet{
+    background: url("../icons/insta-tablet.png")no-repeat;
+    width: 23px;
+    height: 23px;
+  }
  }
 
 .socials__fb {
   background: url("../icons/fb.png")no-repeat;
   width: 10px;
   height: 19px;
+
+  @include tablet{
+    background: url("../icons/fb-tablet.png")no-repeat;
+    width: 14px;
+    height: 28px;
+  }
 }
 
 

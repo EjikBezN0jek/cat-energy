@@ -2,8 +2,17 @@
 @import "../mixins";
 
 .features__item {
-  background: url("../img/weight-back.png")no-repeat;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
   width: 124px;
+  position: relative;
+
+  @include tablet {
+    width: 162px;
+    &:first-child {
+      margin-right: 42px;
+    }
+  }
 }
 
 .features__value {
@@ -11,14 +20,28 @@
   font-size: 24px;
   color: $title-color;
   text-align: center;
-  padding: 13px 0 0;
+  padding: 17px 0 18px;
+
+  @include tablet{
+    font-size: 30px;
+  }
 }
 
 .features__label {
   text-align: center;
-  padding-top: 12px;
   font-size: 12px;
-  width: 87px;
+  padding: 0 10px ;
   background: $color-back;
   margin: 0 auto;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+
+  @include tablet {
+    background: white;
+    width: max-content;
+    bottom: -5px;
+  }
 }

@@ -5,7 +5,20 @@
 
 .advantages {
   padding-top: 32px;
+
+  @include tablet{
+    padding-top: 51px;
+  }
 }
+
+.advantages__block {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
 .advantages__title {
   @include oswald;
   color: $title-color;
@@ -15,12 +28,59 @@
 
 .advantages__text {
   margin-left: 20px;
+
+  @include tablet{
+    margin: 37px 0 0 0;
+    line-height: 24px;
+  }
 }
 
 .advantages__item {
   @include flex-space;
-  &:not(:first-child){
-    padding-top: 20px;
+
+  &:not(:last-child){
+    margin: 0 0 20px;
+  }
+
+  @include tablet{
+    display: block;
+    width: 32%;
+    padding-bottom: 39px;
+
+    &:nth-child(-n+2) {
+      margin: 0 0 87px;
+    }
+    &:nth-child(2n) {
+      margin: 0 80px 20px 100px;
+    }
+    &:nth-child(3) {
+      padding-bottom: 45px;
+    }
+  }
+}
+
+
+.advantage__item--first {
+  @include tablet {
+    background: url("../img/1.png") 75% top no-repeat;
+  }
+}
+
+.advantage__item--second {
+  @include tablet {
+    background: url("../img/2.png") right top no-repeat;
+  }
+}
+
+.advantage__item--third {
+  @include tablet {
+    background: url("../img/3.png") right top no-repeat;
+  }
+}
+
+.advantage__item--fourth {
+  @include tablet {
+    background: url("../img/4.png") right top no-repeat;
   }
 }
 
@@ -30,4 +90,10 @@
   width: 60px;
   height: 60px;
   flex-shrink: 0;
+
+  @include tablet {
+    width: 80px;
+    height: 80px;
+    padding: 25px 26px;
+  }
 }

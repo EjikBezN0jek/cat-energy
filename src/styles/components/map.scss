@@ -2,12 +2,21 @@
 @import "../mixins";
 
 
-
+.map__container {
+  @include tablet{
+    padding: 0 72px;
+  }
+}
 
 .map__header {
   @include flex-space;
   padding-top: 31px;
   padding-bottom: 26px;
+
+  @include tablet {
+    padding-top: 69px;
+    padding-bottom: 62px;
+  }
 }
 
 .map__title {
@@ -17,10 +26,31 @@
   color: $title-color;
   line-height: 20px;
 
+  @include tablet {
+    font-size: 20px;
+    line-height: 25px;
+    width: 154px;
+  }
+
 }
 
 .map__address {
   line-height: 20px;
+  padding-left: 19px;
+
+  @include tablet {
+    text-align: right;
+    font-size: 16px;
+    width: 160px;
+    padding-left: 0;
+  }
+}
+
+.map__address--city {
+  @include tablet {
+    display: inline-block;
+    padding-top: 20px;
+  }
 }
 
 .map__image {
@@ -30,6 +60,12 @@
   position: relative;
   margin: 0 auto;
   width: 320px;
+
+  @include tablet {
+    background: url("../img/map-tablet.png") right center no-repeat;
+    height: 400px;
+    width: 100%;
+  }
 
   &:before {
     content: '';
@@ -41,6 +77,16 @@
     background: url("../img/map-pin.png")no-repeat;
     width: 55px;
     height: 53px;
+
+
+    @include tablet{
+      background: url("../img/map-pin-tablet.png")no-repeat;
+      width: 113px;
+      height: 106px;
+      top: 38%;
+      left: auto;
+      right: 300px;
+    }
   }
 
 }
