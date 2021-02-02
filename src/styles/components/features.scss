@@ -1,7 +1,16 @@
 @import "../variables";
 @import "../mixins";
 
+.features {
+  @include flex-space;
+
+  @include desktop{
+    justify-content: start;
+  }
+}
+
 .features__item {
+  margin: 27px 0 0;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
   width: 124px;
@@ -12,6 +21,10 @@
     &:first-child {
       margin-right: 42px;
     }
+  }
+
+  @include desktop{
+    margin: 70px 0 0;
   }
 }
 
@@ -43,5 +56,9 @@
     background: white;
     width: max-content;
     bottom: -5px;
+  }
+
+  @include desktop {
+    background: $color-back-tablet;
   }
 }

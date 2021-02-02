@@ -3,11 +3,15 @@
 
 .example {
   background: $color-back;
-  margin-top: 42px;
 
   @include tablet {
     border-top: $decor-line;
     background: linear-gradient(transparent 57%, $color-back-tablet 57%);
+  }
+
+  @include desktop{
+    border-top: none;
+    background: linear-gradient(transparent 30%, $color-back-tablet 30%);
   }
 }
 
@@ -18,6 +22,18 @@
   @include tablet {
     padding-top: 51px;
     padding-bottom: 68px;
+  }
+
+  @include desktop {
+    padding-top: 0;
+    @include flex-space;
+    align-items: start;
+  }
+}
+
+.example__info {
+  @include desktop {
+    width: 50%;
   }
 }
 
@@ -30,6 +46,9 @@
     font-size: 60px;
   }
 
+  @include desktop{
+    padding-top: 63px;
+  }
 }
 .example__text {
   line-height: 18px;
@@ -39,12 +58,20 @@
     padding-top: 60px;
     line-height: 24px;
   }
+
+  @include desktop{
+    padding-top: 134px;
+  }
 }
 
 
 .example__stats {
   @include tablet {
     @include flex-space;
+  }
+
+  @include desktop{
+    display: block;
   }
 }
 
@@ -62,14 +89,12 @@
     width: 174px;
     line-height: 25px;
   }
-}
 
-.features {
-  @include flex-space;
-}
-
-.features__item {
-  margin: 27px 0 0;
+  @include desktop {
+    text-align: left;
+    width: 100%;
+    padding-top: 62px;
+  }
 }
 
 
@@ -83,5 +108,11 @@
 
   @include tablet {
     padding-top: 86px;
+  }
+
+  @include desktop {
+    width: 50%;
+    padding-top: 0;
+    margin-left: 139px;
   }
 }

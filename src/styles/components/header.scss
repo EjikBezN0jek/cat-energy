@@ -1,12 +1,27 @@
 @import "../variables";
 @import "../mixins";
 
+
+header {
+  @include desktop {
+    background: url("../img/index-background-desktop.png") top right no-repeat;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+
 .header__container {
   @include flex-space;
   padding: 11px 20px 16px;
 
   @include tablet {
     padding: 24px 30px 0;
+  }
+
+  @include desktop {
+    padding: 54px 15px 0;
   }
 }
 
@@ -32,6 +47,10 @@
     width: 438px;
   }
 
+
+  @include desktop {
+    width: 477px;
+  }
 }
 
 .menu__item {
@@ -39,6 +58,11 @@
   color: $title-color;
   font-size: 18px;
   text-transform: uppercase;
+
+  @include desktop {
+    font-size: 20px;
+    color: white;
+  }
 
   &--active{
     position: relative;
@@ -51,6 +75,10 @@
       background: $color-main;
       height: 2px;
       width: 100%;
+
+      @include desktop{
+        background: white;
+      }
 
     }
   }

@@ -1,15 +1,20 @@
 @import "../variables";
 @import "../mixins";
 
-.programs {
-  padding-top: 24px;
+.programs__container {
+  margin-top: 20px;
 
   @include tablet {
-    padding-top: 0;
+    margin-top: 0;
+  }
+
+  @include desktop {
+    @include flex-space;
+    margin-top: 80px;
   }
 }
 
-.programs__container {
+.programs__card {
   @include flex-space;
   background: $color-back;
   padding: 22px 20px;
@@ -24,6 +29,16 @@
     @include tablet {
       margin-top: 30px;
     }
+
+    @include desktop {
+      margin-top: 0;
+      width: 570px;
+    }
+  }
+
+  @include desktop {
+    width: 50%;
+    padding: 41px 54px 62px;
   }
 }
 
@@ -45,12 +60,20 @@
     font-size: 36px;
   }
 
+  @include desktop {
+    margin-left: 64px;
+  }
+
   &--special {
     margin-left: 12px;
 
     @include tablet {
       margin-left: 0;
     }
+  }
+
+  @include desktop {
+    margin-left: 48px;
   }
 }
 
@@ -67,6 +90,10 @@
     font-size: 16px;
     padding-bottom: 0;
     line-height: 24px;
+  }
+
+  @include desktop {
+    padding-top: 45px;
   }
 }
 
@@ -97,6 +124,10 @@
     width: 24px;
     height: 11px;
   }
+
+  @include desktop {
+    margin-top: 36px;
+  }
 }
 
 .programs__icon {
@@ -124,6 +155,18 @@
     display: none;
     margin-left: 21px;
   }
+
+  @include desktop {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin-left: 0;
+
+    &:after {
+      width: 70px;
+      height: 97px;
+    }
+  }
 }
 
 .programs__icon--big {
@@ -140,6 +183,10 @@
   @include tablet {
     display: block;
   }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .programs__icon--panther {
@@ -155,9 +202,19 @@
 
   @include tablet {
     margin: 0 0 0 50px;
+
     &:after {
       width: 268px;
       height: 112px;
+    }
+  }
+
+  @include desktop {
+    margin: 0;
+
+    &:after {
+      width: 134px;
+      height: 56px;
     }
   }
 }

@@ -2,9 +2,30 @@
 @import "../mixins";
 
 
+.map {
+  position: relative;
+
+  @include desktop {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 .map__container {
-  @include tablet{
+  @include tablet {
     padding: 0 72px;
+  }
+
+  @include desktop {
+    position: absolute;
+    width: 570px;
+    background: white;
+    display: block;
+    top: 23%;
+    left: 110px;
+    right: auto;
+    z-index: 10;
+    padding: 65px 83px;
   }
 }
 
@@ -16,6 +37,10 @@
   @include tablet {
     padding-top: 69px;
     padding-bottom: 62px;
+  }
+
+  @include desktop{
+    padding: 0;
   }
 }
 
@@ -44,6 +69,10 @@
     width: 160px;
     padding-left: 0;
   }
+
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .map__address--city {
@@ -54,7 +83,7 @@
 }
 
 .map__image {
-  background: url("../img/map.png")no-repeat;
+  background: url("../img/map.png") no-repeat;
   background-position-y: -30px;
   height: 370px;
   position: relative;
@@ -65,6 +94,10 @@
     background: url("../img/map-tablet.png") right center no-repeat;
     height: 400px;
     width: 100%;
+    max-width: 1440px;
+  }
+  @include desktop {
+    background: url("../img/map-desktop.png") right center no-repeat;
   }
 
   &:before {
@@ -74,19 +107,27 @@
     top: 42%;
     left: 44%;
     transform: translate(-50% -50%);
-    background: url("../img/map-pin.png")no-repeat;
+    background: url("../img/map-pin.png") no-repeat;
     width: 55px;
     height: 53px;
 
 
-    @include tablet{
-      background: url("../img/map-pin-tablet.png")no-repeat;
+    @include tablet {
+      background: url("../img/map-pin-tablet.png") no-repeat;
       width: 113px;
       height: 106px;
       top: 38%;
       left: auto;
       right: 300px;
     }
+
+    @include desktop {
+      background: url("../img/map-pin.png") no-repeat;
+      top: 50%;
+      left: auto;
+      right: 290px;
+    }
   }
+
 
 }

@@ -44,6 +44,11 @@ p {
     max-width: 768px;
     padding: 0 30px;
   }
+
+  @include desktop {
+    max-width: 1250px;
+    padding: 0 15px;
+  }
 }
 
 //ul, ol {
@@ -76,9 +81,9 @@ p {
 @import "components/header";
 @import "components/banner";
 @import "components/advantages";
-@import "components/program-card";
+@import "components/programs";
 @import "components/example";
-@import "components/features-item";
+@import "components/features";
 @import "components/before-after";
 @import "components/map";
 @import "components/footer";
