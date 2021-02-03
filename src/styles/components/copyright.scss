@@ -3,6 +3,10 @@
 
 .copyright {
   @include flex-space;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
@@ -18,4 +22,8 @@
   background: url("../icons/htmlacademy.png")no-repeat;
   width: 27px;
   height: 34px;
+
+  &:hover {
+    background: url("../icons/htmlacademy-main-color.png")no-repeat;
+  }
 }

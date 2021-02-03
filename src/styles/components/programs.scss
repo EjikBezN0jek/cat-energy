@@ -125,6 +125,19 @@
     height: 11px;
   }
 
+  &:hover {
+    &:after{
+      background: url("../icons/right-arrow-verylong.png")no-repeat;
+      width: 33px;
+      height: 11px;
+      right: -9px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include desktop {
     margin-top: 36px;
   }

@@ -32,6 +32,13 @@ header {
 
 .logo__img {
 
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+
   &--text {
     @include tablet {
       display: none;
@@ -58,6 +65,14 @@ header {
   color: $title-color;
   font-size: 18px;
   text-transform: uppercase;
+
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 
   @include desktop {
     font-size: 20px;

@@ -25,6 +25,10 @@
 .socials__item {
   margin: 0 20px;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   &--vk {
     background: url("../icons/vk.png")no-repeat;
     width: 22px;
@@ -34,6 +38,10 @@
       background: url("../icons/vk-tablet.png")no-repeat;
       width: 30px;
       height: 16px;
+    }
+
+    &:hover {
+      background: url("../icons/vk-main-color.png")no-repeat;
     }
   }
 
@@ -47,6 +55,10 @@
       width: 23px;
       height: 23px;
     }
+
+    &:hover {
+      background: url("../icons/insta-main-color.png")no-repeat;
+    }
   }
 
   &--fb {
@@ -58,6 +70,10 @@
       background: url("../icons/fb-tablet.png")no-repeat;
       width: 14px;
       height: 28px;
+    }
+
+    &:hover {
+      background: url("../icons/fb-main-color.png")no-repeat;
     }
   }
 }
