@@ -9,6 +9,7 @@
     max-width: 1440px;
     margin: 0 auto;
   }
+
 }
 
 .map__container {
@@ -26,6 +27,14 @@
     right: auto;
     z-index: 10;
     padding: 65px 83px;
+  }
+
+  &--form {
+    background: $color-back;
+
+    @include desktop {
+      background: white;
+    }
   }
 }
 

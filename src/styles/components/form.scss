@@ -1,0 +1,382 @@
+@import "../variables";
+@import "../mixins";
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@mixin form-text {
+  @include oswald;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $title-color;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.form {
+  border-top: 1px solid $color-back;
+
+  @include tablet {
+    border-top: none;
+  }
+
+  ::placeholder {
+    @include form-text;
+    color: $font-color;
+  }
+}
+
+.form__line {
+  background: linear-gradient(transparent 15px, $color-main 15px, $color-main 18px, transparent 18px);
+}
+
+.form__title {
+  @include oswald;
+  color: $title-color;
+  font-size: 24px;
+  text-align: left;
+  background: white;
+  padding: 0 20px;
+  width: max-content;
+  margin-left: -20px;
+
+  @include tablet {
+    font-size: 36px;
+  }
+
+  span {
+    display: block;
+  }
+
+  &--main {
+    font-size: 36px;
+    padding: 30px 0 0 0;
+    margin: 0;
+
+    @include tablet {
+      font-size: 60px;
+      padding: 64px 0 0 0;
+    }
+
+    @include desktop {
+      padding: 80px 0 0 0;
+    }
+  }
+
+  @include tablet {
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.form__subtitle {
+  @include oswald;
+  color: $title-color;
+  line-height: 18px;
+  text-align: left;
+  padding-top: 35px;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 30px;
+    width: 50%;
+    padding-top: 53px;
+  }
+
+  @include desktop {
+    width: 30%;
+  }
+}
+
+.form__field {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 15px;
+    transform: translate(0, -50%);
+  }
+
+  &--email {
+
+    &:after {
+      background: url("../icons/mail.png") no-repeat;
+      width: 17px;
+      height: 13px;
+    }
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &--tel {
+    margin-top: 14px;
+
+    &:after {
+      background: url("../icons/phone.png") no-repeat;
+      width: 20px;
+      height: 20px;
+    }
+
+    @include desktop {
+      width: 50%;
+      margin-left: 80px;
+      flex-shrink: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+.form__label {
+  @include form-text;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
+  &--age,
+  &--weight,
+  &--gain,
+  &--advice{
+    margin-top: 14px;
+  }
+}
+
+.form__input {
+  border: $decor-line;
+  @include form-text;
+  margin-left: 15px;
+  height: 45px;
+  width: 100%;
+  padding: 15px 45px 15px 15px;
+}
+
+.form__textarea {
+  border: $decor-line;
+  margin-top: 30px;
+  width: 100%;
+  @include form-text;
+  padding: 15px;
+  height: 150px;
+  resize: none;
+  line-height: 18px;
+
+  @include tablet {
+    margin-top: 70px;
+  }
+}
+
+.pet-data {
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.pet-data__container {
+  padding: 40px 20px 23px;
+
+  @include tablet {
+    padding: 69px 30px 72px;
+  }
+
+  @include desktop {
+    padding: 69px 80px 0 0;
+  }
+}
+
+.flex-wrapper {
+  @include desktop {
+    @include flex-space;
+  }
+}
+
+.program {
+  border-top: $decor-line;
+
+  @include tablet {
+    border-top: none;
+  }
+
+  @include desktop {
+    width: 50%;
+    padding: 69px 0 0 0;
+
+  }
+}
+
+.program__container {
+  padding: 22px 20px;
+
+  @include tablet {
+    border: $decor-line;
+    max-width: 708px;
+    padding: 25px 30px;
+  }
+
+}
+
+.program__control {
+  border-radius: 50%;
+  background: white;
+  border: $decor-line;
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+  position: relative;
+}
+
+.form__radio:checked + .program__control {
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: $color-main;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+}
+
+.owner-data {
+  border-top: $decor-line;
+  padding-top: 30px;
+
+  @include tablet {
+    border-top: none;
+    padding-top: 79px;
+  }
+}
+
+.owner-data__container {
+  padding-top: 30px;
+
+  @include tablet {
+    padding-top: 70px;
+  }
+
+  @include desktop {
+    @include flex-space;
+  }
+}
+
+.comment {
+  padding-top: 30px;
+
+  @include tablet {
+    padding-top: 70px;
+  }
+}
+
+.additionally {
+  padding-top: 30px;
+
+  @include tablet {
+    padding-top: 70px;
+  }
+}
+
+.additionally__container {
+  padding-top: 30px;
+
+  @include tablet {
+    @include flex-space;
+    flex-wrap: wrap;
+    padding-top: 53px;
+  }
+}
+
+.additionally__item {
+  margin-top: 14px;
+
+  @include tablet {
+    width: 50%;
+    margin-top: 0;
+    &:nth-child(3){
+      margin-top: 32px;
+    }
+    &:nth-child(4){
+      margin-top: 32px;
+    }
+  }
+
+  @include desktop {
+    width: 25%;
+    margin-top: 0;
+    &:nth-child(3){
+      margin-top: 0;
+    }
+    &:nth-child(4){
+      margin-top: 0;
+    }
+  }
+}
+
+.additionally__control {
+  border: 1px solid $color-back;
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-right: 16px;
+}
+
+.form__checkbox:checked + .additionally__control {
+  background: url("../icons/tick-main-color.png") center no-repeat;
+}
+
+.submit-form {
+  padding-top: 34px;
+
+  @include tablet {
+    @include flex-space;
+    padding-top: 53px;
+  }
+}
+
+.form__button {
+  width: 100%;
+
+  @include tablet {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 45%;
+  }
+}
+
+.caption {
+  padding-top: 23px;
+  text-align: center;
+
+  @include tablet {
+    width: 50%;
+    padding-top: 0;
+  }
+
+  @include desktop {
+    width: 55%;
+  }
+}
+
+.map {
+  margin-top: 72px;
+}
