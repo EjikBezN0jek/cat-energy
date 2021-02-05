@@ -104,22 +104,23 @@ input[type=number] {
 .form__field {
   position: relative;
 
-  &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 50%;
-    right: 15px;
-    transform: translate(0, -50%);
+  &--tel {
+    margin-top: 14px;
   }
+}
+
+.input__icon {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
 
   &--email {
-
-    &:after {
-      background: url("../icons/mail.png") no-repeat;
-      width: 17px;
-      height: 13px;
-    }
+    background: url("../icons/mail.png") no-repeat;
+    width: 17px;
+    height: 13px;
 
     @include desktop {
       width: 50%;
@@ -127,13 +128,9 @@ input[type=number] {
   }
 
   &--tel {
-    margin-top: 14px;
-
-    &:after {
-      background: url("../icons/phone.png") no-repeat;
-      width: 20px;
-      height: 20px;
-    }
+    background: url("../icons/phone.png") no-repeat;
+    width: 20px;
+    height: 20px;
 
     @include desktop {
       width: 50%;
@@ -149,22 +146,41 @@ input[type=number] {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  cursor: pointer;
 
   &--age,
   &--weight,
   &--gain,
-  &--advice{
+  &--advice {
     margin-top: 14px;
   }
 }
 
 .form__input {
   border: $decor-line;
+  border-radius: 0;
   @include form-text;
   margin-left: 15px;
   height: 45px;
   width: 100%;
   padding: 15px 45px 15px 15px;
+
+  &:hover {
+    outline: none;
+    border: $border-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border: $border-active;
+  }
+}
+
+
+.form__input:focus + .input__icon--email {
+  background: url("../icons/mail-main-color.png")no-repeat;
+  width: 17px;
+  height: 13px;
 }
 
 .form__textarea {
@@ -176,6 +192,18 @@ input[type=number] {
   height: 150px;
   resize: none;
   line-height: 18px;
+
+  &:hover {
+    outline: none;
+    border: $border-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border: $border-active;
+  }
+
+
 
   @include tablet {
     margin-top: 70px;
@@ -256,6 +284,11 @@ input[type=number] {
   }
 }
 
+.form__radio:hover + .program__control, .form__radio:focus + .program__control {
+  border: $border-hover;
+}
+
+
 .owner-data {
   border-top: $decor-line;
   padding-top: 30px;
@@ -306,14 +339,15 @@ input[type=number] {
 
 .additionally__item {
   margin-top: 14px;
+  cursor: pointer;
 
   @include tablet {
     width: 50%;
     margin-top: 0;
-    &:nth-child(3){
+    &:nth-child(3) {
       margin-top: 32px;
     }
-    &:nth-child(4){
+    &:nth-child(4) {
       margin-top: 32px;
     }
   }
@@ -321,13 +355,14 @@ input[type=number] {
   @include desktop {
     width: 25%;
     margin-top: 0;
-    &:nth-child(3){
+    &:nth-child(3) {
       margin-top: 0;
     }
-    &:nth-child(4){
+    &:nth-child(4) {
       margin-top: 0;
     }
   }
+
 }
 
 .additionally__control {
@@ -340,6 +375,10 @@ input[type=number] {
 
 .form__checkbox:checked + .additionally__control {
   background: url("../icons/tick-main-color.png") center no-repeat;
+}
+
+.form__checkbox:hover + .additionally__control {
+  border: $border-hover;
 }
 
 .submit-form {

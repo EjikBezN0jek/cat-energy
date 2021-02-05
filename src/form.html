@@ -27,7 +27,7 @@
       <button type="button" class="button button--burger"></button>
       <nav class="menu">
         <a href="/" class="menu__item link">Главная</a>
-        <a href="#" class="menu__item link">Каталог продукции</a>
+        <a href="catalog.html" class="menu__item link">Каталог продукции</a>
         <a href="form.html" class="menu__item link menu__item--active">Подбор программы</a>
       </nav>
     </div>
@@ -50,7 +50,7 @@
         <div class="container pet-data__container">
           <label class="form__label">
             Имя:*
-            <input type="text" name="name" required placeholder="Барсик" class="form__input">
+            <input type="text" name="name" required autofocus placeholder="Барсик" class="form__input">
           </label>
 
           <label class="form__label form__label--weight">
@@ -68,8 +68,11 @@
         <div class="container program__container">
           <label class="form__label form__label--slimming">
             <input type="radio" name="program" value="slimming" class="form__radio hidden" checked>
-            <span class="program__control"></span>
-            <span class="program__title">Похудение</span>
+
+              <span class="program__control"></span>
+              <span class="program__title">Похудение</span>
+
+
           </label>
 
           <label class="form__label form__label--gain">
@@ -98,11 +101,18 @@
             <label class="form__label form__field form__field--email">
               E-mail:*
               <input type="email" name="email" required placeholder="kuklachev@gmail.com" class="form__input">
+              <span class="input__icon input__icon--email"></span>
             </label>
 
             <label class="form__label form__field form__field--tel">
               Телефон:*
-              <input type="tel" pattern="[0-9]{7,11}" required name="phone"  placeholder="8 (960) 900-60-90" class="form__input">
+              <input type="tel"
+                     pattern="[0-9]{7,11}"
+                     required
+                     name="phone"
+                     placeholder="8 (960) 900-60-90"
+                     class="form__input">
+              <span class="input__icon input__icon--tel"></span>
             </label>
           </div>
         </div>
