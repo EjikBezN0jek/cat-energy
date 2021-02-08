@@ -1,3 +1,84 @@
 @import "../variables";
 @import "../mixins";
 
+.catalog {
+  border-top: $decor-line;
+
+  @include tablet {
+    border-top: none;
+  }
+}
+
+
+.catalog__title {
+  padding-top: 32px;
+  @include oswald;
+  font-size: 36px;
+  color: $title-color;
+  text-align: left;
+  margin-bottom: 35px;
+
+  @include tablet {
+    padding-top: 66px;
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    padding-top: 83px;
+  }
+}
+
+
+.catalog__item {
+  border-top: $decor-line;
+
+  &:not(:first-child) {
+    margin-top: 25px;
+  }
+
+  @include tablet {
+    width: calc(50% - 60px);
+    margin: 0 30px 58px;
+    border-top: none;
+
+    &:nth-child(2n+1) .product__img{
+      top: 36px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+  }
+
+  @include desktop {
+    width: calc(25% - 80px);
+    margin: 0 40px 60px;
+  }
+
+}
+
+
+.goods__container {
+  padding: 0;
+
+  @media screen and (max-width: 767px){
+    max-width: 100%;
+  }
+}
+
+
+.goods__row {
+
+  @include tablet{
+    @include flex-space;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding-top: 75px;
+  }
+
+  @include desktop {
+    margin: 0 -30px;
+  }
+}
+
