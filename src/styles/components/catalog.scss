@@ -244,6 +244,7 @@
 
 .flex-wrapper {
   @include desktop{
-    @include flex-space;
+    display: flex;
+    align-items: flex-end;
   }
 }
