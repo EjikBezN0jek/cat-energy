@@ -1,0 +1,62 @@
+@import "../variables";
+@import "../mixins";
+
+.promo {
+  padding-top: 39px;
+
+  @include tablet {
+    padding-top: 69px ;
+  }
+
+  @include desktop{
+    padding-top: 39px;
+  }
+}
+
+.promo__img {
+  background: url("../img/gift-photo-mobile.png")no-repeat;
+  height: 289px;
+  width: 280px;
+  padding-top: 65px;
+
+  @include tablet {
+    background: url("../img/gift-photo-tablet.png")no-repeat;
+    height: 200px;
+    width: 708px;
+    @include flex-space;
+    padding-top: 0;
+  }
+
+  @include desktop {
+    display: block;
+    background: url("../img/gift-photo-desktop.png")no-repeat;
+    height: 289px;
+    width: 245px;
+    padding-top: 65px;
+  }
+}
+
+.promo__icon {
+  background: url("../icons/gift.png")no-repeat;
+  width: 55px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.promo__text {
+  padding-top: 65px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  width: 159px;
+  line-height: 20px;
+
+  @include tablet {
+    padding-top: 0;
+  }
+
+  @include desktop {
+    padding-top: 65px;
+  }
+}

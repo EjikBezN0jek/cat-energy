@@ -15,10 +15,12 @@
     color: white;
     padding: 14px;
     text-transform: uppercase;
+    font-size: 16px;
 
     &:hover {
       background: #5eaa2f;
     }
+
     &:active {
       background: #5eaa2f;
       color: rgba(255, 255, 255, 0.3);
@@ -26,8 +28,7 @@
 
     @include tablet {
       width: 245px;
-      padding: 16px 27px;
-      font-size: 20px;
+      padding: 13px 27px;
     }
   }
 
@@ -37,11 +38,31 @@
     width: 24px;
     height: 18px;
 
-    @include tablet{
+    @include tablet {
       display: none;
     }
   }
 
+
+  &--more {
+    @include oswald;
+    font-size: 16px;
+    padding: 14px;
+    width: 100%;
+    background: $color-back;
+    color: $font-color;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $color-back-tablet;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+      background: $color-back-tablet;
+    }
+
+  }
 }
 
 

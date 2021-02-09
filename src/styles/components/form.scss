@@ -27,8 +27,10 @@ input[type=number] {
 .form {
   border-top: 1px solid $color-back;
 
+
   @include tablet {
     border-top: none;
+    margin-bottom: 72px;
   }
 
   ::placeholder {
@@ -403,12 +405,12 @@ input[type=number] {
 }
 
 .caption {
-  padding-top: 23px;
+  padding: 23px 0 34px;
   text-align: center;
 
   @include tablet {
     width: 50%;
-    padding-top: 0;
+    padding: 0;
   }
 
   @include desktop {
@@ -416,6 +418,4 @@ input[type=number] {
   }
 }
 
-.map {
-  margin-top: 72px;
-}
+
