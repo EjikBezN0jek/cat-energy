@@ -10,8 +10,8 @@ $color-error: #ff8282;
 //Decor-line
 $decor-line: 1px solid rgba(68,68,68, 0.1);
 $border-hover: 1px solid rgba(68,68,68, 0.5);
-$border-active: 2px solid $font-color;
-$border-error: 2px solid $color-error;
+$border-active: 1px solid $font-color;
+$border-error: 1px solid $color-error;
 
 // Media queries
 $tablet-width: 768px;

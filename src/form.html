@@ -12,27 +12,28 @@
 <header>
   <section class="header">
     <div class="header__container container">
-      <a href="/">
-        <picture class="logo__img">
-          <source media="(min-width: 1200px)" srcset="img/logo-desktop.png">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.png">
-          <img src="img/logo-mobile-img.png" alt="Cat Energy">
-        </picture>
-      </a>
-      <a href="/" class="logo__img logo__img--text">
-        <picture>
-          <img src="img/logo-mobile-text.png" alt="Cat Energy">
-        </picture>
-      </a>
-      <button type="button" class="button button--burger"></button>
-      <nav class="menu">
-        <a href="/" class="menu__item link">Главная</a>
+      <div class="header__wrapper">
+        <a href="/">
+          <picture class="logo__img">
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.png">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.png">
+            <img src="img/logo-mobile-img.png" alt="Cat Energy">
+          </picture>
+        </a>
+        <a href="/" class="logo__img logo__img--text">
+          <picture>
+            <img src="img/logo-mobile-text.png" alt="Cat Energy">
+          </picture>
+        </a>
+        <button type="button" class="button button--burger"></button>
+      </div>
+      <nav class="menu" style="height: 0">
+        <a href="/" class="menu__item link menu__item--active">Главная</a>
         <a href="catalog.html" class="menu__item link">Каталог продукции</a>
-        <a href="form.html" class="menu__item link menu__item--active">Подбор программы</a>
+        <a href="form.html" class="menu__item link">Подбор программы</a>
       </nav>
     </div>
   </section>
-
 </header>
 
 <main>
@@ -202,5 +203,6 @@
     </div>
   </section>
 </footer>
+<script src="js/script.min.js"></script>
 </body>
 </html>

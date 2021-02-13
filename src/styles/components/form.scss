@@ -124,9 +124,7 @@ input[type=number] {
     width: 17px;
     height: 13px;
 
-    @include desktop {
-      width: 50%;
-    }
+
   }
 
   &--tel {
@@ -135,7 +133,6 @@ input[type=number] {
     height: 20px;
 
     @include desktop {
-      width: 50%;
       margin-left: 80px;
       flex-shrink: 0;
       margin-top: 0;
@@ -379,7 +376,7 @@ input[type=number] {
   background: url("../icons/tick-main-color.png") center no-repeat;
 }
 
-.form__checkbox:hover + .additionally__control {
+.form__checkbox:hover + .additionally__control, .form__checkbox:focus + .additionally__control {
   border: $border-hover;
 }
 
